@@ -1,0 +1,37 @@
+<div class="container">
+  <%= form_tag({:controller => "recommenders", :action => "rate"}, :method => "get") do %>
+  <% @movies.each do |movie| %>
+
+  <div class="row" style="margin-top:40px;">
+    <div class="col-md-3 thumbnail">
+      <%= image_tag "http://www.w3schools.com/css/trolltunga.jpg" %>
+    </div>
+
+    <div class="col-md-6">
+      <div class="well well-sm">
+        <div class="row" id="post-review-box">
+            <div class="col-md-12 movie-reviews">
+                <input id="ratings-hidden" name=<%="rating[#{movie.id}]" %> type="hidden">
+                <textarea class="form-control animated" cols="50" id="new-review" name=<%="comment[#{movie.id}]"%> placeholder="Enter your review here..." rows="5"></textarea>
+
+                <div class="text-right">
+                    <div class="stars starrr" data-rating="0"></div>
+                    <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
+                    <span class="glyphicon glyphicon-remove"></span>Cancel</a>
+
+                </div>
+
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <% end %>
+  <div class="row">
+    <button class="btn btn-success btn-lg form-control" type="submit">Save</button>
+  </div>
+  <% end %>
+</div>
+
+

@@ -1,0 +1,2 @@
+json.extract! movie_genre, :id, :unknown, :action, :adventure, :animation, :childrens, :comedy, :crime, :documentary, :drama, :fantasy, :film_noir, :horror, :musical, :mystery, :romance, :sci_fi, :thriller, :war, :western, :movies, :created_at, :updated_at
+json.url movie_genre_url(movie_genre, format: :json)

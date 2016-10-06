@@ -1,0 +1,117 @@
+<%= form_for(movie_genre) do |f| %>
+  <% if movie_genre.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(movie_genre.errors.count, "error") %> prohibited this movie_genre from being saved:</h2>
+
+      <ul>
+      <% movie_genre.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :unknown %>
+    <%= f.check_box :unknown %>
+  </div>
+
+  <div class="field">
+    <%= f.label :action %>
+    <%= f.check_box :action %>
+  </div>
+
+  <div class="field">
+    <%= f.label :adventure %>
+    <%= f.check_box :adventure %>
+  </div>
+
+  <div class="field">
+    <%= f.label :animation %>
+    <%= f.check_box :animation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :childrens %>
+    <%= f.check_box :childrens %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comedy %>
+    <%= f.check_box :comedy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :crime %>
+    <%= f.check_box :crime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :documentary %>
+    <%= f.check_box :documentary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :drama %>
+    <%= f.check_box :drama %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fantasy %>
+    <%= f.check_box :fantasy %>
+  </div>
+
+  <div class="field">
+    <%= f.label :film_noir %>
+    <%= f.check_box :film_noir %>
+  </div>
+
+  <div class="field">
+    <%= f.label :horror %>
+    <%= f.check_box :horror %>
+  </div>
+
+  <div class="field">
+    <%= f.label :musical %>
+    <%= f.check_box :musical %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mystery %>
+    <%= f.check_box :mystery %>
+  </div>
+
+  <div class="field">
+    <%= f.label :romance %>
+    <%= f.check_box :romance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sci_fi %>
+    <%= f.check_box :sci_fi %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thriller %>
+    <%= f.check_box :thriller %>
+  </div>
+
+  <div class="field">
+    <%= f.label :war %>
+    <%= f.check_box :war %>
+  </div>
+
+  <div class="field">
+    <%= f.label :western %>
+    <%= f.check_box :western %>
+  </div>
+
+  <div class="field">
+    <%= f.label :movies %>
+    <%= f.text_field :movies %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unknown: false
+  action: false
+  adventure: false
+  animation: false
+  childrens: false
+  comedy: false
+  crime: false
+  documentary: false
+  drama: false
+  fantasy: false
+  film_noir: false
+  horror: false
+  musical: false
+  mystery: false
+  romance: false
+  sci_fi: false
+  thriller: false
+  war: false
+  western: false
+  movies: 
+
+two:
+  unknown: false
+  action: false
+  adventure: false
+  animation: false
+  childrens: false
+  comedy: false
+  crime: false
+  documentary: false
+  drama: false
+  fantasy: false
+  film_noir: false
+  horror: false
+  musical: false
+  mystery: false
+  romance: false
+  sci_fi: false
+  thriller: false
+  war: false
+  western: false
+  movies: 

@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Movie Genres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unknown</th>
+      <th>Action</th>
+      <th>Adventure</th>
+      <th>Animation</th>
+      <th>Childrens</th>
+      <th>Comedy</th>
+      <th>Crime</th>
+      <th>Documentary</th>
+      <th>Drama</th>
+      <th>Fantasy</th>
+      <th>Film noir</th>
+      <th>Horror</th>
+      <th>Musical</th>
+      <th>Mystery</th>
+      <th>Romance</th>
+      <th>Sci fi</th>
+      <th>Thriller</th>
+      <th>War</th>
+      <th>Western</th>
+      <th>Movies</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie_genres.each do |movie_genre| %>
+      <tr>
+        <td><%= movie_genre.unknown %></td>
+        <td><%= movie_genre.action %></td>
+        <td><%= movie_genre.adventure %></td>
+        <td><%= movie_genre.animation %></td>
+        <td><%= movie_genre.childrens %></td>
+        <td><%= movie_genre.comedy %></td>
+        <td><%= movie_genre.crime %></td>
+        <td><%= movie_genre.documentary %></td>
+        <td><%= movie_genre.drama %></td>
+        <td><%= movie_genre.fantasy %></td>
+        <td><%= movie_genre.film_noir %></td>
+        <td><%= movie_genre.horror %></td>
+        <td><%= movie_genre.musical %></td>
+        <td><%= movie_genre.mystery %></td>
+        <td><%= movie_genre.romance %></td>
+        <td><%= movie_genre.sci_fi %></td>
+        <td><%= movie_genre.thriller %></td>
+        <td><%= movie_genre.war %></td>
+        <td><%= movie_genre.western %></td>
+        <td><%= movie_genre.movies %></td>
+        <td><%= link_to 'Show', movie_genre %></td>
+        <td><%= link_to 'Edit', edit_movie_genre_path(movie_genre) %></td>
+        <td><%= link_to 'Destroy', movie_genre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie Genre', new_movie_genre_path %>
