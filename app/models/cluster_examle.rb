@@ -45,7 +45,6 @@ data_set = Ai4r::Data::DataSet.new(:data_items => answers, :data_labels => quest
 # Let's group answers in 4 groups
 kmeans = Ai4r::Clusterers::KMeans.new
 clusterer = kmeans.build(data_set, 4)
-debugger
 clusterer.clusters.each_with_index do |cluster, index|
     puts "Group #{index+1}"
     p cluster.data_items
