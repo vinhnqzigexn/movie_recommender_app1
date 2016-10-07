@@ -6,10 +6,25 @@
   </div>
 <% end %>
 <% if user_signed_in? %>
-  <% if $recommender.@similar_users %>
+  <% if @movies_recommend %>
   <th>Movies Recommend For You</th>
+  <div class="row">
+    <% @@ovies_recommend.each do |movie| %>
+      <div class="col-sm-6 col-md-3">
+        <div class="thumbnail">
+          <%= link_to (image_tag "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg", class: 'thumbnail'), movie %>
+        </div>
+        <div>
+          <strong><%= movie.title.truncate(30)%></strong>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <% else %>
-
+    <div class="jumbotron">
+      <h1>Let Us Proposal Movies For You</h1>
+    <p><%= link_to "Go To Recommender", recommenders_path, class: "btn btn-primary btn-lg" %></p>
+  </div>
   <% end %>
 
 <% end %>

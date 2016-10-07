@@ -12,6 +12,11 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all.sample(30)
+    if $recommender.similar_users
+      similarity_users = $recommender.similar_users
+      movie_ids = Review.where("user_id in (#{@similarity_users.join(',')})").pluck(:movie_id).uniq
+      @movies_recommend = Movie.where("id in (#{movie_ids.join(',')})").first(10)
+    end
   end
 
   def show

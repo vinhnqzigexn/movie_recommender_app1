@@ -1,8 +1,5 @@
 class RecommendersController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  def intialize
-    @similarity_users = nil
-  end
 
   def index
     @movies = Movie.all.sample(10)
