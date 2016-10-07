@@ -9,7 +9,7 @@
   <% if @movies_recommend %>
   <th>Movies Recommend For You</th>
   <div class="row">
-    <% @@ovies_recommend.each do |movie| %>
+    <% @movies_recommend.each do |movie| %>
       <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
           <%= link_to (image_tag "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg", class: 'thumbnail'), movie %>
