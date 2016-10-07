@@ -7,7 +7,7 @@
 <% end %>
 <% if user_signed_in? %>
   <% if @movies_recommend %>
-  <th>Movies Recommend For You</th>
+  <h1>Movies Recommend For You</h1>
   <div class="row">
     <% @movies_recommend.each do |movie| %>
       <div class="col-sm-6 col-md-3">
@@ -28,6 +28,7 @@
   <% end %>
 
 <% end %>
+<h1>Random Movies Recommend</h1>
 <div class="row">
   <% @movies.each do |movie| %>
     <div class="col-sm-6 col-md-3">
