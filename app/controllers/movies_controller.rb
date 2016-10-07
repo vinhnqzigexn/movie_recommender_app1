@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
+    @movies = Movie.all.sample(30)
   end
 
   def show
