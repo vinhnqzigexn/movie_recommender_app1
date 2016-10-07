@@ -281,5 +281,6 @@ class Recommender
     top_5 = result1.first(5)
     top_5_genres = []
     @similar_users = top_5
+    p @similar_users
   end
 end

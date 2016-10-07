@@ -5,7 +5,14 @@
     <p><%= link_to "Sign Up To Write A Review", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
   </div>
 <% end %>
+<% if user_signed_in? %>
+  <% if $recommender.@similar_users %>
+  <th>Movies Recommend For You</th>
+  <% else %>
 
+  <% end %>
+
+<% end %>
 <div class="row">
   <% @movies.each do |movie| %>
     <div class="col-sm-6 col-md-3">
