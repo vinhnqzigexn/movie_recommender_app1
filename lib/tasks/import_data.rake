@@ -9,4 +9,9 @@ namespace :import do
     Recommender.new.train_recommend
   end
 
+  
+  desc "Recommend"
+  task :recommend => :environment do
+    Recommender.new.recommend
+  end
 end
